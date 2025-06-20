@@ -1,6 +1,6 @@
 # C2 Tracker
 
-C2 Tracker is a free-to-use-community-driven IOC feed that uses [Shodan](https://www.shodan.io/) and [Censys](https://search.censys.io/) searches to collect IP addresses of known malware/botnet/C2 infrastructure.
+C2 Tracker is a free-to-use-community-driven IOC feed that uses [Shodan](https://www.shodan.io/) ~~and [Censys](https://search.censys.io/)~~ searches to collect IP addresses of known malware/botnet/C2 infrastructure.
 
 ## Honorable Mentions
 
@@ -13,12 +13,13 @@ Many of the queries have been sourced from other CTI researchers:
 - [Glacius_](https://twitter.com/Glacius_)
 - [corumir](https://github.com/corumir)
 - [salmanvsf](https://x.com/salmanvsf)
+- [SecurityJosh](https://github.com/SecurityJosh)
 
 Huge shoutout to them!
 
 Thanks to [BertJanCyber](https://twitter.com/BertJanCyber) for creating the [KQL query](https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Threat%20Hunting/TI%20Feed%20-%20MontySecurity%20C2%20Tracker%20All%20IPs.md) for ingesting this feed
 
-And finally, thanks to [Y_nexro](https://twitter.com/Y_NeXRo) for creating [C2Live](https://github.com/YoNixNeXRo/C2Live) in order to visualize the data
+And finally, thanks to [Y_nexro](https://twitter.com/Y_NeXRo) for creating [C2Live](https://github.com/YoNixNeXRo/C2Live) in order to visualize the data and the website version at [c2tracker.com](https://c2tracker.com)
 
 ## Usage
 
@@ -53,14 +54,12 @@ The most recent collection will be stored in `data/`. The IPs are seperated by t
     - [Hak5 Cloud C2](https://shop.hak5.org/products/c2)
     - [Pantegana](https://github.com/cassanof/pantegana)
     - [Supershell](https://github.com/tdragon6/Supershell/tree/main)
-    - Poseidon C2
-    - Viper C2
-    - [UnamWebPanel](https://github.com/UnamSanctam/UnamWebPanel)
     - [Vshell](https://github.com/veo/vshell)
     - [Villain](https://github.com/t3l3machus/Villain)
     - [Nimplant C2](https://github.com/chvancooten/NimPlant)
     - [RedGuard C2](https://github.com/wikiZ/RedGuard/tree/main)
     - Oyster C2
+    - [byob C2](https://github.com/malwaredllc/byob)
 - Malware
     - AcidRain Stealer
     - Misha Stealer (AKA Grand Misha)
@@ -96,8 +95,6 @@ The most recent collection will be stored in `data/`. The IPs are seperated by t
     - Atlandida Stealer
     - VenomRAT
     - Orcus RAT
-    - DcRAT
-    - BitRAT
     - BlackDolphin
     - Artemis RAT
     - Godzilla Loader
@@ -107,6 +104,25 @@ The most recent collection will be stored in `data/`. The IPs are seperated by t
     - [SpiceRAT](https://hunt.io/blog/the-secret-ingredient-unearthing-suspected-spicerat-infrastructure-via-html-response)
     - Dust RAT
     - Pupy RAT
+    - Atomic Stealer
+    - Lumma Stealer
+    - Serpent Stealer
+    - Axile Stealer
+    - Vector Stealer
+    - Mint Stealer
+    - Z3us Stealer
+    - Rastro Stealer
+    - Darkeye Stealer
+    - Agniane Stealer
+    - Epsilon Stealer
+    - Bahamut Stealer
+    - [Unam Web Panel](https://github.com/UnamSanctam/UnamWebPanel) / SilentCryptoMiner
+    - Vidar Stealer
+    - Kraken RAT
+    - Bumblebee Loader
+    - Viper RAT
+    - Spectre Stealer
+    - Sectop RAT
 - Tools
     - [XMRig Monero Cryptominer](https://xmrig.com/)
     - [GoPhish](https://getgophish.com/)
@@ -114,11 +130,17 @@ The most recent collection will be stored in `data/`. The IPs are seperated by t
     - [BurpSuite](https://portswigger.net/burp)
     - [Hashcat](https://hashcat.net/hashcat/)
     - [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
+    - [EvilGoPhish](https://github.com/fin3ss3g0d/evilgophish)
+    - [EvilGinx](https://github.com/kgretzky/evilginx2)
 - Botnets
     - [7777](https://gi7w0rm.medium.com/the-curious-case-of-the-7777-botnet-86e3464c3ffd)
     - [BlackNET](https://github.com/suriya73/BlackNET)
     - Doxerina
     - Scarab
+    - [63256](https://www.team-cymru.com/post/botnet-7777-are-you-betting-on-a-compromised-router)
+    - Kaiji
+    - MooBot
+    - Mozi
 
 ## Running Locally
 
@@ -145,3 +167,4 @@ I encourage opening an issue/PR if you know of any additional Shodan/Censys sear
 - [https://twitter.com/ViriBack/status/1713714868564394336](https://twitter.com/ViriBack/status/1713714868564394336)
 - [https://gi7w0rm.medium.com/the-curious-case-of-the-7777-botnet-86e3464c3ffd](https://gi7w0rm.medium.com/the-curious-case-of-the-7777-botnet-86e3464c3ffd)
 - [https://twitter.com/Glacius_/status/1731699013873799209](https://twitter.com/Glacius_/status/1731699013873799209)
+- [https://www.team-cymru.com/post/botnet-7777-are-you-betting-on-a-compromised-router](https://www.team-cymru.com/post/botnet-7777-are-you-betting-on-a-compromised-router)

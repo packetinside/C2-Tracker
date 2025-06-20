@@ -93,7 +93,8 @@ def shodan():
         ],
         "Collector Stealer": [
             'http.html:"Collector Stealer"',
-            'http.html:getmineteam'
+            'http.html:getmineteam',
+            'product:"Collector Stealer"'
         ],
         "Mystic Stealer": [
             "http.title:'Mystic Stealer'",
@@ -153,7 +154,7 @@ def shodan():
         "njRAT Trojan": [
             "product:'njRAT Trojan'"
         ],
-        "Remcos Pro RAT Trojan": [
+        "Remcos RAT": [
             "product:'Remcos Pro RAT Trojan'"
         ],
         "Poison Ivy Trojan": [
@@ -178,7 +179,7 @@ def shodan():
         ],
         # Credit: https://github.com/corumir
         # Tool: https://github.com/suriya73/BlackNET
-        "BlackNET Botnet": [
+        "BlackNet Botnet": [
             "http.title:'BlackNet - Login'"
         ],
         "Doxerina Botnet": [
@@ -219,7 +220,7 @@ def shodan():
         "NetBus Trojan": [
             "product:'NetBus Trojan'"
         ],
-        "UnamWebPanel": [
+        "Unam Web Panel": [
             "html:unam_lib.js http.favicon.hash:-1278680098,-1531496738",
             "http.title:'Unam Web Panel &mdash; Login'"
         ],
@@ -252,6 +253,19 @@ def shodan():
         ],
         "Oyster C2": [
             "http.html_hash:-51903740"
+        ],
+        "Mozi Botnet": [
+            "http.html_hash:-1245370368"
+        ],
+        "Prysmax Stealer": [
+            "http.title:'Prysmax Stealer'"
+        ],
+        "Spectre Stealer": [
+            "http.title:'Spectre Stealer - Login'"
+        ],
+        # Credit: @phage_nz
+        "Sectop RAT": [
+            "http.headers_hash:-1731927497 port:9000,15647"
         ]
     }
 
@@ -284,17 +298,18 @@ def shodan():
         all_ips_file.write(f"{ip}\n")
 
 def censys():
+    # This function is disabled until I get new queries after Censys changed their search syntax
     queries = {
         "RisePro Stealer": [
             "services.http.response.headers: (key: `Server` and value.headers: `RisePro`)",
             "services.software.product:RisePro"
         ],
-        "Viper C2": [
-            "services.software.product=`VIPER`"
-        ],
-        "Poseidon C2": [
-            "services.http.response.html_title=`POSEIDON`"
-        ],
+        #"Viper C2": [
+        #    "services.software.product=`VIPER`"
+        #],
+        #"Poseidon C2": [
+        #    "services.http.response.html_title=`POSEIDON`"
+        #],
         "Scarab Botnet": [
             "services.software.product=`Scarab`"
         ],
@@ -341,7 +356,7 @@ def censys():
             "services.software.product:`Mythic`"
         ],
         "Vshell C2": [
-            "services.software.product=`Vshell`",
+            "services.software: (vendor: Vshell and product: Vshell)",
             "services.http.response.html_title:'Vshell - 登录'"
         ],
         "Hookbot": [
@@ -410,6 +425,96 @@ def censys():
         ],
         "Pupy RAT": [
             "services.software.product=`Pupy RAT`"
+        ],
+        "Remcos RAT": [
+            "services.software.product=Remcos"
+        ],
+        # https://www.team-cymru.com/post/botnet-7777-are-you-betting-on-a-compromised-router
+        "63256 Botnet": [
+            "services.port:63256 and services.banner_hashes='sha256:13e9b4b65e60bd9c8e58232591012fa6e2240a7b348ccdd611490e17d00b25f6'"
+        ],
+        "BYOB C2": [
+            "services.software.product:byob"
+        ],
+        "Meduza Stealer": [
+            "services.software.product:meduza-stealer"
+        ],
+        "Lumma Stealer": [
+            "services.software.product: lumma-stealer"
+        ],
+        "Bandit Stealer": [
+            "services.software.product: bandit-stealer"
+        ],
+        "Atomic Stealer": [
+            "services.software.product: atomic-stealer"
+        ],
+        "Serpent Stealer": [
+            "services.software.product: serpent-stealer"
+        ],
+        "Axile Stealer": [
+            "services.software.product: axile-stealer"
+        ],
+        "Vector Stealer": [
+            "services.software.product: vector-stealer"
+        ],
+        "Mint Stealer": [
+            "services.software.product: mint-stealer"
+        ],
+        "Z3us Stealer": [
+            "services.software.product: z3us-stealer"
+        ],
+        "Rastro Stealer": [
+            "services.software.product: rastro-stealer"
+        ],
+        "Darkeye Stealer": [
+            "services.software.product: darkeye-stealer"
+        ],
+        "Agniane Stealer": [
+            "services.software.product: agniane-stealer"
+        ],
+        "Epsilon Stealer": [
+            "services.software.product: epsilon-stealer"
+        ],
+        "Kaiji Botnet": [
+            "services.software.product: Kaiji"
+        ],
+        "MooBot Botnet": [
+            "services.software.product: MooBot"
+        ],
+        "Bahamut Stealer": [
+            "services.software.product: Bahamut"
+        ],
+        "Unam Web Panel": [
+            "services.software.product: UnamWebPanel"
+        ],
+        "Vidar Stealer": [
+            "services.software.product: Vidar"
+        ],
+        "BlackNet Botnet": [
+            "services.software.product:'BlackNET RAT'"
+        ],
+        "Kraken RAT": [
+            "services.software.product: kraken-rat"
+        ],
+        "Bumblebee Loader": [
+            "services.software.product: Bumblebee"
+        ],
+        "Viper RAT": [
+            "services.software.product: Viper"
+        ],
+        "EvilGinx": [
+            "services.software.product: EvilGinx"
+        ],
+        "GoPhish": [
+            "services.software.product: GoPhish"
+        ],
+        "EvilGoPhish": [
+            "services.software.product: EvilGoPhish"
+        ],
+        # Credit: @phage_nz
+        "Sectop RAT": [
+            "services.software.vendor=SectopRAT",
+            'services.banner_hashes="sha256:e09e1b5b03b592b8e626296e1a7baa004cac61aaf0a75658af744f9e1d7853fc" and (services.port:9000 or services.port:15647)'
         ]
     }
     h = CensysHosts()
@@ -455,7 +560,7 @@ def deconflict():
 def main():
     load_dotenv()
     shodan()
-    censys()
+    #censys()
     deconflict()
 
 if __name__ == '__main__':
